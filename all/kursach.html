@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="kursach.css">
+ <title>Document</title>
+</head>
+<body>
+ <canvas id="can" width="1050" height="550"></canvas>
+ <div>
+ <button onclick="pososesh(1);">1</button>
+ <button onclick="pososesh(2);">2</button>
+ <button onclick="pososesh(3);">3</button>
+ <button onclick="pososesh(4);">4</button>
+ <button onclick="pososesh(5);">all</button>
+</div>
+<div>
+ <button onclick="moving(1)"><</button>
+ <button onclick="moving(2)">pause</button>
+ <button onclick="moving(3)">></button>
+</div>
+ <script>
+  function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+  switchh = 5;
+  function pososesh(hh){
+   switchh = hh;
+  }
+  var array = [];
+  for(var kk = 0; kk < 4; kk++) {
+   var arr = [];
+   for(var ll = 0; ll < 30; ll++) {
+    var gg = getRandomInt(1, 50);
+    arr.push(gg);
+   }
+   array.push(arr);
+  }
+  console.log(array);
+  var can = document.getElementById("can");
+  var ctx = can.getContext('2d');
+  var counter= 1 ;
+  move =1;
+  function moving(hh){
+   if (hh == 1) {
+    if(counter != 1)
+    counter--;
+    else 
+     counter = 30;
+   }
+   if (hh == 2){
+    if (move)
+    move = 0;
+    else 
+    move = 1;
+   }
+   if (hh == 3) {
+    if(counter != 30)
+    counter++;
+    else 
+     counter = 1;
+   }
+   vivod();
+  }
+  var colors = ["#7FFFD4", "#40E0D0","#48D1CC","#00CED1"];
+  function printsetka(){
+ctx.strokeStyle = "black";
+ctx.lineWidth = 1.5;
+for(var h = -1;h<50;h++){
+    ctx.beginPath();       
+ctx.moveTo(50, h*10+10);    
+ctx.lineTo(1050, h*10+10);  
+ctx.stroke();
+
+}
+for(var w = 1; w <11;w++){
+    ctx.beginPath();  
+    ctx.moveTo(w*100, 0);    
+ctx.lineTo(w*100, 500); 
+ctx.stroke();
+}
+  }
+  function printnumbers(day) {
+   ctx.fillStyle="white";
+   ctx.fillRect(0,0,80, 550)
+   for (var x = 0, gg = 50 ; x < 60 ; x+= 10, gg-=10){
+
+    ctx.fillStyle="black";
+    ctx.font = "20px Verdana";
+    ctx.fillText(`${gg}C`, 10,x*10/1.05+22);
+
+   }
+   for(var p = 0; p < 10; p++,day++){
+    if (day>30)
+     day = 1;
+    if(day == 0)
+    day = 30;
+    ctx.fillText(`${day}d`, p *100  +90,520);
+   }
+  }
+  function vivod(){
+   ctx.clearRect(0, 0, can.width, can.height);
+   printsetka();
+   for(var counter1 = 0; counter1 < 4; counter1++) {
+    if(counter1+1 == switchh || switchh == 5)
+    for (var counter2 = 0 ; counter2 < 10;counter2++ ){
+     var zzz = counter + counter2;
+     var zzz2 = counter + counter2 + 1;
+     if(zzz > 29)
+      zzz -= 30;
+     if(zzz2 > 29)
+      zzz2 -= 30;
+     var yy1 = array[counter1][zzz];
+     var yy2 = array[counter1][zzz2];
+     var xx1 = counter2;
+     var xx2 = counter2 + 1;;
+     ctx.beginPath ();
+     ctx.lineWidth = 3;
+ctx.strokeStyle =colors[counter1];
+ctx.arc (xx1*100 + 100, yy1*10 , 2, 0, Math.PI * 2, false);
+ctx.stroke();
+ctx.beginPath(); 
+  ctx.moveTo(xx1*100 + 100,yy1*10 );
+  ctx.lineTo(xx2*100 + 100,yy2*10 );
+  ctx.stroke();
+    }
+   }
+   printnumbers(counter);
+   if (move){
+   if(counter != 30)
+   counter++;
+   else 
+   counter = 0;}
+  }
+  setInterval(vivod,1000/1);
+ </script>
+</body>
+</html>
