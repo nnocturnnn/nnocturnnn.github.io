@@ -1,0 +1,307 @@
+
+ * {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+}
+
+body {
+	background: #eee;
+	font-family: "Helvetica Neue", sans-serif;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+
+
+/* Watch Container */
+.watch-container {
+	width: 150px;
+	margin: 25px auto;
+}
+
+/* Watch */
+.watch {
+	position: relative;
+	width: 150px;
+	height: 150px;
+}
+
+/* Watch Face */
+.watch-face {
+	width:150px;
+	height: 150px;
+	border-radius: 100%;
+	background: #3F484A; /* Dial colour */
+	border: 5px solid silver; /* Face border */
+	box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.5), 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+	
+	/* Watch Face Outline */
+	.watch-face-outline {}
+
+	.watch-face-outline-point {
+		position: absolute;
+		width: 5px;
+		height: 5px;
+		background: #777;
+		left:72.5px;
+		top: 12px;
+		border-radius: 100%;
+		-webkit-transform-origin: 50% 63px;
+		transform-origin: 50% 63px;
+	}
+
+	.point-12 { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	.point-1 { -webkit-transform: rotate(30deg); transform: rotate(30deg); }
+	.point-2 { -webkit-transform: rotate(60deg); transform: rotate(60deg); }
+	.point-3 { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+	.point-4 { -webkit-transform: rotate(120deg); transform: rotate(120deg); }
+	.point-5 { -webkit-transform: rotate(150deg); transform: rotate(150deg); }
+	.point-6 { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+	.point-7 { -webkit-transform: rotate(210deg); transform: rotate(210deg); }
+	.point-8 { -webkit-transform: rotate(240deg); transform: rotate(240deg); }
+	.point-9 { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+	.point-10 { -webkit-transform: rotate(300deg); transform: rotate(300deg); }
+	.point-11 { -webkit-transform: rotate(330deg); transform: rotate(330deg); }
+
+	/* Watch Face Date */
+	.watch-face-date {
+    position: absolute;
+		background-color: rgba(0,0,0,0.1);
+    width: 13.5px;
+    height: 13.5px;
+    border-radius: 100%;
+    text-align: center;
+		top: 69px;
+		right: 25px;
+		font-size: 7.5px;
+    line-height: 13.5px;
+		color: #aaa;
+		font-weight: 300;
+	}
+
+	/* Watch Face Center */
+	.watch-face-centre {
+		position: absolute;
+		width: 6px;
+		height: 6px;
+		top: 72px;
+		left:72px;
+		border-radius: 100%;
+		background: #fff;
+	}
+
+	.watch-face-centre-inner {
+		position: absolute;
+		z-index: 1;
+		width: 4px;
+		height: 4px;
+		top: 1px;
+		left: 1px;
+		border-radius: 100%;
+		background: #333;
+		border: 1px solid #fa9f22;
+	}
+
+	/* Watch Face Hands */
+	.watch-face-hands {}
+
+	.watch-face-hand {
+		position: absolute;
+	}
+
+	.watch-face-hand.hour {
+		width: 2px;
+		height: 30px;
+		top: 45px;
+		left: 74px;
+		border-radius: 5px;
+		background: #fff;
+		-webkit-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+		-webkit-transform: rotate(306deg);
+		transform: rotate(306deg);
+	}
+
+	.watch-face-hand.minute {
+		width: 2px;
+		height: 60px;
+		top: 15px;
+		left: 74px;
+		border-radius: 5px;
+		background: #fff;
+		-webkit-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+		-webkit-transform: rotate(50deg);
+		transform: rotate(50deg);
+	}
+	
+	.watch-face-hand.second {
+		width: 1px;
+		height: 72.5px;
+		top: 10px;
+		left: 74.5px;
+		border-radius: 5px;
+		background: #fa9f22;
+		-webkit-transform-origin: 50% 65px;
+		transform-origin: 50% 65px;
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+
+/* Watch Crown */
+.watch-crown {
+	position: relative;
+	z-index: -1;
+	width: 7.5px;
+	height: 13px;
+	top: -81.5px;
+	left: 147.5px;
+	border-radius: 2.5px;
+	background: #999;
+	border-right: 1px solid rgba(0, 0, 0, 0.05);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Watch Straps */
+.watch-strap-top {
+	position: relative;
+	z-index: -1;
+	width:60px;
+	height: 75px;
+	left: 45px;
+	bottom: -10px;
+	background: #785734;
+	border-radius: 10px 10px 0 0;
+}
+
+.watch-strap-bottom {
+	position: relative;
+	z-index: -1;
+	width: 60px;
+	height: 60px;
+	left: 45px;
+	bottom: 10px;
+	background: #785734;
+	border-radius: 0 0 10px 10px;
+	color: rgba(0, 0, 0, 0.2);
+	font-weight: bold;
+	text-align: center;
+	padding-top: 60px;
+	text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+td, th {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+th {
+  background: lightblue;
+  border-color: white;
+}
+header{
+  display: grid;
+  justify-items: center;
+  background: #012951;
+  color:white;
+  padding: 25px 0 25px;
+}
+
+footer{
+  display: grid;
+  justify-items: center;
+  background: #012951;
+  color:white;
+  padding: 25px 0 25px;
+}
+aside{
+  background-color: #011c38;
+  width: 100%;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items:center;
+  text-align: center;
+}
+aside a{
+  color: white;
+  padding: 20px 0 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+aside a:hover{
+  background: orange;
+  color: #012951;
+  transition: .6s;
+}
+
+
+
+
+
+
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+  }
+  .maincontent{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+
+  }
+  .employees{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .employee img{
+    width:100px;
+  }
+  .employee{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    color: black;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius:15px;
+  }
+  .employee:hover{
+    background: grey;
+    transition: .6s;
+  }
+  .mainheader{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
+  .stupid_text{
+    padding-left: 40px;
+  }
+  .mainmain{
+    padding: 40px 0 40px;
+  }
+  @media screen and (max-width: 970px) {
+    main{
+      grid-template-columns: 1fr;
+    }
+  }
+  @media screen and (max-width:700px) {
+    .maincontent{
+      grid-template-columns: 1fr;
+    }
+  }
