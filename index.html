@@ -3,299 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet"> 
-  <link href="style.css" rel="stylesheet">
+    <title>Comfy House</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Portal for employee selection</h1>
+    <!--navbar  -->
+    <nav class="navbar">
+        <div class="navbar-center">
+            <span class="nav-icon">
+            <i class="fa fa-bars"></i>
+        </span>
+        <img src="./images/logo.svg" alt="store logo" />
+        <div class="cart-btn">
+            <span class="nav-icon">
+                <i class="fa fa-cart-plus"></i>
+            </span>
+            <div class="cart-items">0</div>
+        </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+    <!-- hero -->
+    <header class="hero">
+        <div class="banner">
+            <h1 class="banner-title">furniture collection</h1>
+            <button class="banner-btn">shop now</button>
+        </div>
     </header>
-
-    <main>
-    <aside>
-      <a href="index.html">Main</a>
-      <a href="index.html">Employees</a>
-      <a href="contacts.html">Contacts</a>
-    </aside>
-    <section class="mainmain">
-        <div class="mainheader">
-            <div class="stupid_text">
-                <h3> Our best employees</h3>
-                <h4>Time is money !!</h4>
-            </div>
-            <div class="watch-container">
-  
-      <div class="watch">
-        <div class="watch-face">
-          <div class="watch-face-outline">
-            <div class="watch-face-outline-point point-12"></div>
-            <div class="watch-face-outline-point point-1"></div>
-            <div class="watch-face-outline-point point-2"></div>
-            <div class="watch-face-outline-point point-3"></div>
-            <div class="watch-face-outline-point point-4"></div>
-            <div class="watch-face-outline-point point-5"></div>
-            <div class="watch-face-outline-point point-6"></div>
-            <div class="watch-face-outline-point point-7"></div>
-            <div class="watch-face-outline-point point-8"></div>
-            <div class="watch-face-outline-point point-9"></div>
-            <div class="watch-face-outline-point point-10"></div>
-            <div class="watch-face-outline-point point-11"></div>
-          </div>
-  
-          <div class="watch-face-date date"></div>
-  
-          <div class="watch-face-centre">
-            <div class="watch-face-centre-inner"></div>
-          </div>
-  
-          <div class="watch-face-hands">
-            <div class="watch-face-hand hour"></div>
-            <div class="watch-face-hand minute"></div>
-            <div class="watch-face-hand second"></div>
-          </div>
-        </div>
-  
- 
-      </div>
-  
-            </div>
-        </div>
-        <div class="maincontent">
-          <div class="employees">
-          <a href="#" class="employee">
-            <img src="img/avatar1.jpg" alt="">
-            <div class="employeecontent">
-              <div>
-                Name: Oleg
-              </div>
-              <div>
-                Skills: Eng B2, Unix, Web
-              </div>
-              <div>
-               Location: USA
-              </div>
-              <div>
-                Cost: 200$
-              </div>
-              
-            </div>
-          </a>
-          <a href="#" class="employee">
-            <img src="img/avatar2.jpg" alt="">
-            <div class="employeecontent">
-              <div>
-                Name: KOT
-              </div>
-              <div>
-                Skills: Eng B1, Front-end
-              </div>
-              <div>
-               Location: UA
-              </div>
-              <div>
-                Cost: 500$
-              </div>
-              
-            </div>
-          </a>
-          <a href="#" class="employee">
-            <img src="img/avatar3.jpg" alt="">
-            <div class="employeecontent">
-              <div>
-                Name: Jhanna
-              </div>
-              <div>
-                Skills: Eng B2, Unix, IoT
-              </div>
-              <div>
-               Location: UA
-              </div>
-              <div>
-                Cost: 150$
-              </div>
-              
-            </div>
-          </a>
-          <a href="#" class="employee">
-            <img src="img/avatar4.jpg" alt="">
-            <div class="employeecontent">
-              <div>
-                Name: Dima
-              </div>
-              <div>
-                Skills: Eng B2, PHP, C++
-              </div>
-              <div>
-               Location: USA
-              </div>
-              <div>
-                Cost: 1500$
-              </div>
-              
-            </div>
-          </a>
-        </div>
-        
-        <div class="maintable"><table>
-          <tr>
-            <th>1</th>
-            <th>$</th>
-            <th>$</th>
-            <th>m</th>
-            <th>o</th>
-            <th>n</th>
-            <th>e</th>
-            <th>y</th>
-            <th>$</th>
-            <th>$</th>
-          </tr>
-          <tr>
-            <th>2</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            
-          </tr>
-          <tr>
-            <th>3</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-          </tr>
-        
-          <tr>
-            <th>4</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <td>$</td>
-            <td>$</td>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-          </tr>
-          <tr>
-            <th>5</th>
-            <th>$</th>
-            <th>$</th>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-          </tr>
-          <tr>
-            <th>6</th>
-            <th>$</th>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <th>$</th>
-            <th>$</th>
-          </tr>
-          <tr>
-            <th>7</th>
-            <th>$</th>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <th>$</th>
-            <th>$</th>
-          </tr>
-          <tr>
-            <th>8</th>
-            <th>$</th>
-            <th>$</th>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <td>$</td>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-          </tr>
-          <tr>
-            <th>9</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <td>$</td>
-            <td>$</td>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-          </tr>
-          <tr>
-            <th>10</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-          </tr>
-          <tr>
-            <th>11</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-          </tr>
-          <tr>
-            <th>12</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-            <th>$</th>
-          </tr>
-        </table></div>
-
+    <!-- end of hero -->
+    <!-- products -->
+    <section class="products">
+     <div class="section-title">
+        <h2>our products</h2>
+     </div>
+     <div class="products-center">
+         <!-- single product
+         <article class="product">
+             <div class="img-container">
+                 <img src="./images/product-1.jpeg" alt="product" class="product-img">
+                 <button class="bag-btn" data-id="1">
+                    <i class="fa fa-shopping-cart"></i>
+                    add to bag
+                 </button>
+             </div>
+             <h3>queen bed</h3>
+             <h4>$15</h4>
+         </article>
+         end of single product -->
+     </div>
     </section>
-    </main>
-    <footer>
-        <h3>Choose our best employees !!!</h3>
-        <h5>© 2020 Maks, All rights reserved</h5>
-    </footer>
+     <!-- end of products -->
+     <!-- cart -->
+     <div class="cart-overlay">
+         <div class="cart">
+             <span class="close-cart">
+                 <i class="fa fa-window-close"></i>
+             </span>
+             <h2>your cart</h2>
+             <div class="cart-content">
+                 <!-- cart item -->
+                 <!-- <div class="cart-item"> -->
+        
+                 <!-- </div> -->
+                 <!-- end of cart item -->
+             </div>
+             <div class="cart-footer">
+                 <h3>your total: $ <span class="cart-total">0</span></h3>
+                 <button class="clear-cart banner-btn">clear cart</button>
+             </div>
+         </div>
+     </div>
+     <!-- end of cart -->
+     <!-- contentful -->
+     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+     <!-- javascript -->
+     <script src="app.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>  
 </body>
 </html>
-<script
-  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-  crossorigin="anonymous"></script>
-<script src="script_clock.js"></script>
