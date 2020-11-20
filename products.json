@@ -3,25 +3,25 @@
     {
       "sys": { "id": "1" },
       "fields": {
-        "title": "peperoni",
+        "title": "queen panel bed",
         "price": 10.99,
-        "image": { "fields": { "file": { "url": "./images/pizza-1.png" } } }
+        "image": { "fields": { "file": { "url": "./images/product-1.jpeg" } } }
       }
     },
     {
       "sys": { "id": "2" },
       "fields": {
-        "title": "tabasko",
+        "title": "king panel bed",
         "price": 12.99,
-        "image": { "fields": { "file": { "url": "./images/pizza-2.png" } } }
+        "image": { "fields": { "file": { "url": "./images/product-2.jpeg" } } }
       }
     },
     {
       "sys": { "id": "3" },
       "fields": {
-        "title": "meat",
+        "title": "single panel bed",
         "price": 12.99,
-        "image": { "fields": { "file": { "url": "./images/pizza-3.png" } } }
+        "image": { "fields": { "file": { "url": "./images/product-3.jpeg" } } }
       }
     },
     {
@@ -29,7 +29,7 @@
       "fields": {
         "title": "twin panel bed",
         "price": 22.99,
-        "image": { "fields": { "file": { "url": "./images/pizza-4.png" } } }
+        "image": { "fields": { "file": { "url": "./images/product-4.jpeg" } } }
       }
     },
     {
