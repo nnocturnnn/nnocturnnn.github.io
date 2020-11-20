@@ -19,9 +19,6 @@ body {
   font-family: "Lato", sans-serif;
 }
 /* --------------- Navbar ---------------- */
-.nav {
-  padding: 15px;
-}
 .navbar {
   position: sticky;
   top: 0;
@@ -32,7 +29,6 @@ body {
   background: rgb(231, 226, 221);
   z-index: 1;
 }
-
 .navbar-center {
   width: 100%;
   max-width: 1170px;
@@ -62,7 +58,7 @@ body {
 /* --------------- Hero ---------------- */
 .hero {
   min-height: calc(100vh - 60px);
-  background: url("./images/hero-bcg.jpeg") center/cover no-repeat;
+  background: url("/comfyHouse/images/hero-bcg.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,6 +109,12 @@ body {
   max-width: 1170px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  /* alternative codes */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr */
+  /* ^creates for columsn */
+  /* grid-template-columns: repeat(4, 1fr; */
+  /* ^alternative syntax for the same commented command */
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
 }
