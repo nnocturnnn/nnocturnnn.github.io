@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <html>
     <head>
-        <link rel="shortcut icon" href="./img/pizza.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="./images/pizzaIcon.svg">
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- import icon -->
@@ -134,102 +134,93 @@
         
        
         <!-- menu -->
-        <section id="menu">
-            <div class="container">
-                <h4 class="center light white-text">Our Menu</h4>
-                <div class="row">
-                    <div class="col s12 m6">
-                        <h4 class="center light white-text">Sides</h4>
-                        <hr>
-                        <div class="col s6">
-                            <div class="content-menu">
-                                <img src="./img/menu/sides/broccolini_384.jpg" alt="">
-                                <h5>NEW Rosemary & Garlic Flatbread with Houmous</h5>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col s6">
-                            <div class="content-menu"> 
-                                <img src="./img/menu/sides/rosemary_flatbread_384.jpg" alt="">
-                                <h5>NEW Broccolini</h5>
-                                <p>Tenderstem broccoli, simply roasted with garlic & chilli</p>
-                            </div>
-                        </div>
-                        <div class="col s12">
-                            <a class="waves-effect waves-light btn-large">See All Sides</a>
-                        </div>
-                    </div>
-                    <div class="col s12 m6">
-                        <h4 class="center light white-text">Mains</h4>
-                        <hr>
-                        <div class="col s6">
-                            <div class="content-menu">
-                                <img src="./img/menu/mains/barbacoa_romana_384.jpg" alt="">
-                                <h5>NEW Barbacoa</h5>
-                                <p>Smoky, spicy and full-flavoured: pulled Barbacoa beef, spicy chipotle salsa, garlic oil, mozzarella, and tomato, finished with fresh tomato, red onion and fresh coriander on a Romana base</p>
-                            </div>
-                        </div>
-                        <div class="col s6">
-                            <div class="content-menu">
-                                <img src="./img/menu/mains/padana_384_classic.jpg" alt="">
-                                <h5>Padana</h5>
-                                <p>Goat’s cheese, mozzarella, tomato, caramelised onion, spinach, red onion and garlic oil on a Classic base (pictured). Also available on a gluten-free base. </p>
-                            </div>
-                        </div>
-                        <div class="col s12">
-                                <a class="waves-effect waves-light btn-large">See All Mains</a>
-                            </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m6">
-                        <h4 class="center light white-text">Desserts</h4>
-                        <hr>
-                        <div class="col s6">
-                            <div class="content-menu">
-                                <img src="./img/menu/desserts/lemon_sponge_cake_384.jpg" alt="">
-                                <h5>NEW Warm Lemon Sponge Cake</h5>
-                                <p>lemon sponge cake with a soft lemon curd centre, vanilla gelato and fresh raspberries</p> 
-                            </div>
-                        </div>
-                        <div class="col s6">
-                            <div class="content-menu">
-                                <img src="./img/menu/desserts/honeycomb_cream_slice_384_v2.jpg" alt="">
-                                <h5>NEW Honeycomb Cream Slice</h5>
-                                <p>Sweet honeycomb and chocolate pieces in a light creamy topping on a layer of salted caramel and crunchy biscuit served with your choice of cream, mascarpone or gelato</p>
-                            </div>
-                        </div>
-                        <div class="col s12">
-                                <a class="waves-effect waves-light btn-large">See All Desserts</a>
-                            </div>
-                    </div >
-                    <div class="col s12 m6">
-                            <h4 class="center light white-text">Drinks</h4>
-                            <hr>
-                            <div class="col s6">
-                                <div class="content-menu">
-                                    <img src="./img/menu/drinks/negroni_spritz_384.jpg" alt="">
-                                    <h5>NEW Negroni Spritz</h5>
-                                    <p>An Italian classic, a Negroni with gin, Italian bitter liqueur & vermouth rosso topped with Prosecco and a slice of orange</p>
-                                </div>
-                            </div>
-                            <div class="col s6">
-                                <div class="content-menu">
-                                    <img src="./img/menu/drinks/chianti_384.jpg" alt="">
-                                    <h5>Chianti Riserva D.O.C.G</h5>
-                                    <p>Tuscany, Italy (ABV 13%). Smooth ripe fruit flavours with a hint of spice.</p>
-                                </div>
-                            </div>
-                            <div class="col s12">
-                                    <a class="waves-effect waves-light btn-large">See All Drinks</a>
-                                </div>
-                        </div>
-                    </div>
-
+        <div class="models">
+            <div class="pizza-item">
+                <a href="">
+                    <div class="pizza-item--img"><img src="" /></div>
+                    <div class="pizza-item--add">+</div>
+                </a>
+                <div class="pizza-item--price"></div>
+                <div class="pizza-item--name"></div>
+                <div class="pizza-item--desc"></div>
+            </div>
+            <div class="cart--item">
+                <img src="" />
+                <div class="cart--item-nome"></div>
+                <div class="cart--item--qtarea">
+                    <button class="cart--item-qtmenos">-</button>
+                    <div class="cart--item--qt">1</div>
+                    <button class="cart--item-qtmais">+</button>
                 </div>
             </div>
-        </section>
-      <!--JavaScript at end of body for optimized loading-->
+        </div>
+        <!-- <header>
+            <div class="menu-openner"><span>0</span>🍕</div>
+        </header> -->
+        <main>
+            <h1>Pizzas</h1>
+            <div class="pizza-area"></div>
+        </main>
+        <aside>
+            <div class="cart--area">
+                <div class="menu-closer">❌</div>
+                <h1>Suas Pizzas</h1>
+                <div class="cart"></div>
+                <div class="cart--details">
+                    <div class="cart--totalitem subtotal">
+                        <span>Subtotal</span>
+                        <span></span>
+                    </div>
+                    <div class="cart--totalitem desconto">
+                        <span>Desconto (-10%)</span>
+                        <span></span>
+                    </div>
+                    <div class="cart--totalitem total big">
+                        <span>Total</span>
+                        <span></span>
+                    </div>
+                    <div class="cart--finalizar">Finalizar a compra</div>
+                </div>
+            </div>
+        </aside>
+        <div class="pizzaWindowArea">
+            <div class="pizzaWindowBody">
+                <div class="boxBack">
+                    <div class="pizzaInfo--cancelMobileButton">❌</div>
+                </div>
+                <div class="pizzaBig">
+                    <img src="" />
+                </div>
+                <div class="pizzaInfo">
+                    <h1>--</h1>
+                    <div class="pizzaInfo--desc"></div>
+                    <div class="pizzaInfo--sizearea">
+                        <div class="pizzaInfo--sector">Tamanho</div>
+                        <div class="pizzaInfo--sizes">
+                            <div data-key="0" class="pizzaInfo--size">PEQUENA <span></span></div>
+                            <div data-key="1" class="pizzaInfo--size">MÉDIO <span></span></div>
+                            <div data-key="2" class="pizzaInfo--size selected">GRANDE <span></span></div>
+                        </div>
+                    </div>
+                    <div class="pizzaInfo--pricearea">
+                        <div class="pizzaInfo--sector">Preço</div>
+                        <div class="pizzaInfo--price">
+                            <div class="pizzaInfo--actualPrice"></div>
+                            <div class="pizzaInfo--qtarea">
+                                <button class="pizzaInfo--qtmenos">-</button>
+                                <div class="pizzaInfo--qt">1</div>
+                                <button class="pizzaInfo--qtmais">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pizzaInfo--addButton">Adicionar ao carrinho</div>
+                    <div class="pizzaInfo--cancelButton">Cancelar</div>
+                </div>
+            </div>
+        </div>
+    
+        <script type="text/javascript" src="./scripts/pizzas.js"></script>
+        <script type="text/javascript" src="./scripts/script.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="./js/main.js"></script>
         <script src="./js/service.js"></script>
