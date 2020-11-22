@@ -2,7 +2,7 @@
 let modalCount = 1;
 let modalKey = 0;
 let cart = JSON.parse(localStorage.getItem('session')) ? JSON.parse(localStorage.getItem('session')):[] ;
-console.log(cart)
+
 const qs = (e) => document.querySelector(e);
 const qsa = (e) => document.querySelectorAll(e);
 const cl = (e) => console.log(e);
