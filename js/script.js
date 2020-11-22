@@ -2,7 +2,7 @@
 let modalCount = 1;
 let modalKey = 0;
 let cart = JSON.parse(localStorage.getItem('session')) ? JSON.parse(localStorage.getItem('session')):[] ;
-
+console.log(cart)
 const qs = (e) => document.querySelector(e);
 const qsa = (e) => document.querySelectorAll(e);
 const cl = (e) => console.log(e);
@@ -105,6 +105,7 @@ qs('.pizzaInfo--addButton').addEventListener('click', () => {
 
     }
     localStorage.setItem('session', JSON.stringify(cart));
+    console.log(cart)
     updateCart();
     closeModal();
 });
@@ -183,7 +184,6 @@ function updateCart(){
         qs('aside').classList.remove('show');
         qs('aside').style.left = '100vw';
     }
-    localStorage.setItem('session', JSON.stringify(cart));
     
 }
 
