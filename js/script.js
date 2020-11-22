@@ -1,8 +1,8 @@
 //Variaveis globais
 let modalCount = 1;
 let modalKey = 0;
-let cart = [];
-
+let cart = JSON.parse(localStorage.getItem('session')) ? JSON.parse(localStorage.getItem('session')):[] ;
+console.log(cart)
 const qs = (e) => document.querySelector(e);
 const qsa = (e) => document.querySelectorAll(e);
 const cl = (e) => console.log(e);
@@ -104,6 +104,8 @@ qs('.pizzaInfo--addButton').addEventListener('click', () => {
         });
 
     }
+    localStorage.setItem('session', JSON.stringify(cart));
+    console.log(cart)
     updateCart();
     closeModal();
 });
@@ -184,3 +186,45 @@ function updateCart(){
     }
     
 }
+
+updateCart()
+let can = document.getElementById("can")
+
+function gg(){
+    var c=document.getElementById('can'),
+      ctx=c.getContext('2d'),
+      pi = Math.PI,
+      xCenter = c.width/2,
+      yCenter = c.height/2,
+      radius = c.width/3,
+      startSize = radius/3,
+      num=5,
+      posX=[],posY=[],angle,size,i;
+  
+    window.setInterval(function() {
+      num++;
+      ctx.clearRect ( 0 , 0 , xCenter*2 , yCenter*2 );
+      for (i=0; i<9; i++){
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(255,255,255,'+.1*i+')';
+        if (posX.length==i){
+          angle = pi*i*.25;
+          posX[i] = xCenter + radius * Math.cos(angle);
+          posY[i] = yCenter + radius * Math.sin(angle);
+        }
+        ctx.arc(
+          posX[(i+num)%8],
+          posY[(i+num)%8],
+          startSize/9*i,
+          0, pi*2, 1); 
+        ctx.fill();
+      }
+    }, 100);
+    
+  }
+  gg()
+function ready() {
+    can.style = "display: none"
+  }
+
+  document.addEventListener("DOMContentLoaded", ready);
