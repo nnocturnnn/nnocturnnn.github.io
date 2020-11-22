@@ -226,5 +226,5 @@ function gg(){
 function ready() {
     can.style = "display: none"
   }
- 
+  
   document.addEventListener("DOMContentLoaded", ready);
