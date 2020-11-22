@@ -189,24 +189,28 @@ function updateCart(){
 
 updateCart()
 let can = document.getElementById("can")
+can.style.width = 
+window.screen.availWidth + "px"
 
+can.style.height = 
+window.screen.availHeight + "px"
 function gg(){
     var c=document.getElementById('can'),
       ctx=c.getContext('2d'),
       pi = Math.PI,
       xCenter = c.width/2,
       yCenter = c.height/2,
-      radius = c.width/3,
+      radius = 10,
       startSize = radius/3,
       num=5,
       posX=[],posY=[],angle,size,i;
-  
+    
     window.setInterval(function() {
       num++;
       ctx.clearRect ( 0 , 0 , xCenter*2 , yCenter*2 );
       for (i=0; i<9; i++){
         ctx.beginPath();
-        ctx.fillStyle = 'rgba(255,255,255,'+.1*i+')';
+        ctx.fillStyle = 'rgba(240, 68, 0,'+.1*i+')';
         if (posX.length==i){
           angle = pi*i*.25;
           posX[i] = xCenter + radius * Math.cos(angle);
