@@ -22,11 +22,11 @@
                         <ul class="right hide-on-med-and-down">
                             <li><a href="#about_us">About Us</a></li>
                             <li><a href="#clients">Clients</a></li>
-                            <li><a href="#">Services</a></li>
+                            <li><a href="#services">Services</a></li>
                             <li><a href="#">Our Menu</a></li>
                             <li><a href="#">Contact</a></li>
                             <li> <div class="menu-openner"><span>0</span></div></li>
-                            <li><a class="pizzochka" href="#">🍕</a></li>
+                            <li><a class="pizzochka" href="#pizza-area">🍕</a></li>
                         </ul>
                     </div>
                 </div>
@@ -129,6 +129,29 @@
                         <span>Total</span>
                         <span></span>
                     </div>
+                    <form name="orderForm" onsubmit="return validateForm()">
+                    <div class="form-group">
+                            <label for="name">Name: </label>
+                            <input type="text" id="name" class="customer-details form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address: </label>
+                            <input type="text" id="address" class="customer-details form-control" placeholder="1234 Main Str">
+                        </div>
+                    <div class="form-group col-md-6">
+                        <label for="city">City: </label>
+                        <input type="text" id="city" class="customer-details form-control">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="email">Email: </label>
+                        <input type="text" id="state" class="customer-details form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone: </label>
+                        <input type="text" id="phone" class="customer-details form-control">
+                    </div>
+                    <button type="submit" class="btn btn-dark">Submit Order</button>
+                    </form>
                     <div class="cart--finalizar">Finalize purchase</div>
                 </div>
             </div>

@@ -5,3 +5,7 @@ document.querySelectorAll('.service').forEach(function(elm){
         service_content.innerHTML = "<p>Test</p>";  
     })
 });
+
+document.getElementsByClassName("pizzochka")[0].addEventListener("click", function(){
+    window.scrollTo(0, document.querySelector(".cart--area").offsetTop);
+});

@@ -15,3 +15,28 @@ document.addEventListener('DOMContentLoaded', function() {
     var parallax = document.querySelectorAll('.parallax');
     var init_parallax = M.Parallax.init(parallax);
 });
+
+function validateForm() {
+    let name = document.orderForm.name.value;
+    let address = document.orderForm.address.value;
+    let city = document.orderForm.city.value;
+    let state = document.orderForm.state.value;
+    let phone = document.orderForm.phone.value;
+  
+    if (name == null || name == '') {
+      alert("Name field can't be blank.");
+      return false;
+    } else if (address === null || address === '') {
+      alert("Address field can't be blank.");
+      return false;
+    } else if (city === null || city === '') {
+      alert("City field can't be blank.");
+      return false;
+    } else if (state === null || state === '') {
+      alert("State field can't be blank.");
+      return false;
+    } else if (/^\d{10}$/.test(phone) === false) {
+      alert('Please enter valid phone number.');
+      return false;
+    }
+  }
