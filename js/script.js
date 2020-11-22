@@ -224,7 +224,8 @@ function gg(){
   }
   gg()
 function ready() {
-    can.style = "display: none"
+    
+    setTimeout(() => can.style = "display: none", 500);
   }
   
   document.addEventListener("DOMContentLoaded", ready);
