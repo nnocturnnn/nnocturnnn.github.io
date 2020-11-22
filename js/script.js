@@ -105,7 +105,6 @@ qs('.pizzaInfo--addButton').addEventListener('click', () => {
 
     }
     localStorage.setItem('session', JSON.stringify(cart));
-    console.log(cart)
     updateCart();
     closeModal();
 });
@@ -184,6 +183,7 @@ function updateCart(){
         qs('aside').classList.remove('show');
         qs('aside').style.left = '100vw';
     }
+    localStorage.setItem('session', JSON.stringify(cart));
     
 }
 
