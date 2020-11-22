@@ -7,7 +7,7 @@ const qs = (e) => document.querySelector(e);
 const qsa = (e) => document.querySelectorAll(e);
 const cl = (e) => console.log(e);
 
-pizzaJson.map((pizza, index) => {
+pizzaJson1.map((pizza, index) => {
     let pizzaItem = qs('.models .pizza-item').cloneNode(true);
     pizzaItem.setAttribute('data-key', index);
     pizzaItem.querySelector('.pizza-item--img img').src = pizza.img; //Consegue-se usar a class e a tag num mesmo querySelector
@@ -18,7 +18,7 @@ pizzaJson.map((pizza, index) => {
 
         e.preventDefault();
         let key = e.target.closest(".pizza-item").getAttribute("data-key");
-        const pizzaKey = pizzaJson[key];
+        const pizzaKey = pizzaJson1[key];
         modalCount = 1;
         modalKey = key;
 
@@ -32,7 +32,7 @@ pizzaJson.map((pizza, index) => {
 
             if (sizeIndex == 2) size.classList.add("selected");
 
-            const pizzaSizes = pizzaJson[key].sizes[sizeIndex];
+            const pizzaSizes = pizzaJson1[key].sizes[sizeIndex];
             size.querySelector("span").innerHTML = pizzaSizes;
         })
 
@@ -45,7 +45,91 @@ pizzaJson.map((pizza, index) => {
         }, 200)
     })
 
-    qs('.pizza-area').append(pizzaItem);
+    qs('.pizza-area1').append(pizzaItem);
+
+});
+
+pizzaJson2.map((pizza, index) => {
+    let pizzaItem = qs('.models .pizza-item').cloneNode(true);
+    pizzaItem.setAttribute('data-key', index);
+    pizzaItem.querySelector('.pizza-item--img img').src = pizza.img; //Consegue-se usar a class e a tag num mesmo querySelector
+    pizzaItem.querySelector('.pizza-item--price').innerHTML = pizza.price.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' });
+    pizzaItem.querySelector('.pizza-item--name').innerHTML = pizza.name;
+    pizzaItem.querySelector('.pizza-item--desc').innerHTML = pizza.description;
+    pizzaItem.querySelector('a').addEventListener('click', (e) => {
+
+        e.preventDefault();
+        let key = e.target.closest(".pizza-item").getAttribute("data-key");
+        const pizzaKey = pizzaJson2[key];
+        modalCount = 1;
+        modalKey = key;
+
+        qs(".pizzaBig img").src = pizzaKey.img;
+        qs(".pizzaInfo h1").innerHTML = pizzaKey.name;
+        qs(".pizzaInfo--desc").innerHTML = pizzaKey.description;
+        qs(".pizzaInfo--actualPrice").innerHTML = pizzaKey.price.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' });
+        qs(".pizzaInfo--size.selected").classList.remove("selected");
+        qs(".pizzaInfo--qt").innerHTML = modalCount;
+        qsa(".pizzaInfo--size").forEach((size, sizeIndex) => {
+
+            if (sizeIndex == 2) size.classList.add("selected");
+
+            const pizzaSizes = pizzaJson2[key].sizes[sizeIndex];
+            size.querySelector("span").innerHTML = pizzaSizes;
+        })
+
+        qs('.pizzaWindowArea').style.opacity = 0;
+        qs('.pizzaWindowArea').style.display = 'flex';
+        setTimeout(() => {
+
+            qs('.pizzaWindowArea').style.opacity = 1;
+
+        }, 200)
+    })
+
+    qs('.pizza-area2').append(pizzaItem);
+
+});
+
+pizzaJson3.map((pizza, index) => {
+    let pizzaItem = qs('.models .pizza-item').cloneNode(true);
+    pizzaItem.setAttribute('data-key', index);
+    pizzaItem.querySelector('.pizza-item--img img').src = pizza.img; //Consegue-se usar a class e a tag num mesmo querySelector
+    pizzaItem.querySelector('.pizza-item--price').innerHTML = pizza.price.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' });
+    pizzaItem.querySelector('.pizza-item--name').innerHTML = pizza.name;
+    pizzaItem.querySelector('.pizza-item--desc').innerHTML = pizza.description;
+    pizzaItem.querySelector('a').addEventListener('click', (e) => {
+
+        e.preventDefault();
+        let key = e.target.closest(".pizza-item").getAttribute("data-key");
+        const pizzaKey = pizzaJson3[key];
+        modalCount = 1;
+        modalKey = key;
+
+        qs(".pizzaBig img").src = pizzaKey.img;
+        qs(".pizzaInfo h1").innerHTML = pizzaKey.name;
+        qs(".pizzaInfo--desc").innerHTML = pizzaKey.description;
+        qs(".pizzaInfo--actualPrice").innerHTML = pizzaKey.price.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' });
+        qs(".pizzaInfo--size.selected").classList.remove("selected");
+        qs(".pizzaInfo--qt").innerHTML = modalCount;
+        qsa(".pizzaInfo--size").forEach((size, sizeIndex) => {
+
+            if (sizeIndex == 2) size.classList.add("selected");
+
+            const pizzaSizes = pizzaJson3[key].sizes[sizeIndex];
+            size.querySelector("span").innerHTML = pizzaSizes;
+        })
+
+        qs('.pizzaWindowArea').style.opacity = 0;
+        qs('.pizzaWindowArea').style.display = 'flex';
+        setTimeout(() => {
+
+            qs('.pizzaWindowArea').style.opacity = 1;
+
+        }, 200)
+    })
+
+    qs('.pizza-area3').append(pizzaItem);
 
 });
 
@@ -86,9 +170,9 @@ qsa(".pizzaInfo--size").forEach((size, sizeIndex) => {
 
 qs('.pizzaInfo--addButton').addEventListener('click', () => {
     let size = Number(qs(".pizzaInfo--size.selected").getAttribute('data-key'));
-    let Ident = pizzaJson[modalKey].id + "@" + size;
+    let Ident = pizzaJson1[modalKey].id + "@" + size;
     let key = cart.findIndex((item) => item.Ident === Ident);
-    let sum = modalCount * pizzaJson[modalKey].price;
+    let sum = modalCount * pizzaJson1[modalKey].price;
 
     if (key > -1) {
         const carKey = cart[key];
@@ -96,9 +180,9 @@ qs('.pizzaInfo--addButton').addEventListener('click', () => {
 
     } else {
         cart.push({
-            Id: pizzaJson[modalKey].id,
+            Id: pizzaJson1[modalKey].id,
             Ident,
-            Nome: pizzaJson[modalKey].name,
+            Nome: pizzaJson1[modalKey].name,
             Tamanho: size,
             Quantidade: modalCount
         });
@@ -137,7 +221,7 @@ function updateCart(){
         
         for(let i in cart){
 
-            let pizzaItem = pizzaJson.find((item) => item.id == cart[i].Id);
+            let pizzaItem = pizzaJson1.find((item) => item.id == cart[i].Id);
             let cartItem = qs('.models .cart--item').cloneNode(true);
             let pizzaSizeName;
             subtotal += pizzaItem.price * cart[i].Quantidade;
