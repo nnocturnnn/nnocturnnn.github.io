@@ -229,7 +229,7 @@ function gg(){
   gg()
 function ready() {
     
-    setTimeout(() => can.style = "display: none", 500);
+    setTimeout(() => can.style = "display: none", 1500);
   }
   
   document.addEventListener("DOMContentLoaded", ready);
