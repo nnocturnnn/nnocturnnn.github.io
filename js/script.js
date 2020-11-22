@@ -233,3 +233,12 @@ function ready() {
   }
   
   document.addEventListener("DOMContentLoaded", ready);
+
+  function doTask() {
+      cart = []
+    localStorage.setItem('session', JSON.stringify(cart));
+alert("Pizza be pordered")
+updateCart()
+closeModal();
+
+    }
